@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block content %} 
+  {% if user_list %} 
+     <ul>
+       {% for user in user_list %} 
+       <li>
+         {{user.username}}
+       </li> 
+       {% endfor %} 
+    </ul> 
+  {% else %} 
+    This user is not following anyone.
+  {% endif %} 
+{% endblock %}
